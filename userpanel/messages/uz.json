@@ -1,0 +1,17 @@
+{
+  "HeaderItems": {
+    "item1": "Ramkali basseynlar",
+    "item2": "Puflanadigan basseynlar"
+  },
+  "HeroText": {
+    "text": "Mavsumiy sotuv!"
+  },
+  "ServiceItems": {
+    "item1Header": "Basseynlarni bepul yetkazib berish",
+    "item1Text": "Biz mijozlarimizni qadrlaymiz, siz bizning xizmatimiz sifatiga amin bo'lishingiz mumkin!",
+    "item2Header": "Sovg'a sifatida maxsus kimyoviy moddalar",
+    "item2Text": "Basseyn uchun maxsus tozalash kimyoviy moddalari - bepul",
+    "item3Header": "Sifat kafolati",
+    "item3Text": "Barcha INTEX mahsulotlari originaldir"
+  }
+}
