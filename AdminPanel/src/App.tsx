@@ -1,35 +1,51 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from 'react'
+import { useRoutes } from 'react-router-dom'
+import MainLayout from './layout/MainLayout'
+import Framed from './pages/products/Framed'
 
-function App() {
-  const [count, setCount] = useState(0)
-
-  return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+const App = () => {
+  return useRoutes([{
+    path: "/",
+    element: <MainLayout/>,
+    children: [
+      {
+        path: "products",
+        element: <Framed/>,
+        children: [
+          {
+            path: "framed",
+            element: <div>Framed</div>
+          },
+          {
+            path: "inflatable",
+            element: <div>Inflatable</div>
+          }
+        ]
+      },
+      {
+        path: "orders",
+        element: <div>Orders</div>,
+        children: [
+          {
+            path: "orders",
+            element: <div>Orders</div>
+          },
+          {
+            path: "consultations",
+            element: <div>Consultations</div>
+          }
+        ]
+      },
+      {
+        path: "categories",
+        element: <div>Categories</div>
+      },
+      {
+        path: "settings",
+        element: <div>Settings</div>
+      }
+    ]
+  }])
 }
 
-export default App
+export default React.memo(App)
