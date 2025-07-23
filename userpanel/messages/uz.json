@@ -13,5 +13,42 @@
     "item2Text": "Basseyn uchun maxsus tozalash kimyoviy moddalari - bepul",
     "item3Header": "Sifat kafolati",
     "item3Text": "Barcha INTEX mahsulotlari originaldir"
+  },
+  "Currency": {
+    "currency": "so'm",
+    "btn": "Buyurtma berish"
+  },
+  "PlaceHolders": {
+    "name": "Ismingiz",
+    "phone": "Telefon raqamingiz",
+    "address": "Manzilingiz"
+  },
+  "DeliverFree": {
+    "heading": "Yetkazib berish bepul",
+    "text": "Toshkent shahri ichida yetkazib berish bepul (shahar tashqarisida yetkazib berish uchun alohida to'lanadi)",
+    "btn": "Buyurtma bering"
+  },
+  "ClientValue": {
+    "heading": "Mijozlarimiz qadriyatlari",
+    "header1": "Tajriba",
+    "text1": "Xodimlarimizning professionalligi",
+    "header2": "Yetkazib berish",
+    "text2": "Shahar ichida bepul yetkazib berish",
+    "header3": "Sifat",
+    "text3": "Bardoshli, sifatli basseynlar"
+  },
+  "TashkentPool": {
+    "heading": "Toshkentdagi intex dan basseynlar",
+    "text1": "Intex-dan basseynlar butun oila uchun yoqimli dam olish uchun mo'ljallangan, arzon, sifatli, ishonchli va ekologik toza mahsulotlardir. Hovuz mutlaqo har qanday hududga o'rnatilishi va yozda faol ishlatilishi mumkin. Hovuz sizga yorqin his-tuyg'ularni beradi va issiq yoz kunlarida sizni jaziramadan qutqaradi.",
+    "text2": "Intex basseynlari ko'plab afzalliklarga ega, ulardan eng muhimlari:",
+    "item1": "Kuch",
+    "item2": "O'rnatish oson",
+    "item3": "Chiroyli va yorqin ranglar",
+    "item4": "Zamonaviy dizayn",
+    "item5": "Yuqori sifatli"
+  },
+  "Orders": {
+    "success": "Rahmat",
+    "text": "Buyurtmangiz muvaffaqiyatli joylashtirildi. Tez orada siz bilan bog'lanamiz."
   }
 }

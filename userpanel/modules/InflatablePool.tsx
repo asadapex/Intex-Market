@@ -6,20 +6,20 @@ import { useTranslations } from "next-intl";
 import { FC } from "react";
 
 interface CardsType {
-  inflatable: { data: CardType[] };
+  cards: { data: CardType[] };
 }
 
-const FrameBasseyn: FC<CardsType> = ({ inflatable }) => {
+const InflatablePool: FC<CardsType> = ({ cards }) => {
   const t = useTranslations("HeaderItems");
   const { data } = getQueryData(
-    "/product?categoryId=1490639d-48b8-47c6-b238-cbb01c9696db&limit=12",
-    inflatable,
-    "inflatable"
+    "/product?categoryId=f8aa4e4c-66cc-4731-b0f1-d0c5e883c503&limit=3",
+    cards,
+    "cards"
   );
   return (
     <div className="flex flex-col items-center bg-[#F8F8F8]">
       <div className="shadow-[0_24px_24px_rgba(0,0,0,0.3)] flex justify-center items-center w-full py-[22px] bg-[#009398]">
-        <h1 className="font-bold text-[50px] text-white">{t("item1")}</h1>
+        <h1 className="font-bold text-[50px] text-white">{t("item2")}</h1>
       </div>
 
       <div className="py-[97px] px-[50px]">
@@ -33,4 +33,4 @@ const FrameBasseyn: FC<CardsType> = ({ inflatable }) => {
   );
 };
 
-export default FrameBasseyn;
+export default InflatablePool;

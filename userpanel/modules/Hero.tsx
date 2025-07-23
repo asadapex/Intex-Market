@@ -4,7 +4,7 @@ import Image from "next/image";
 const Hero = () => {
   const t = useTranslations("HeroText");
   return (
-    <section className="mt-[95px]">
+    <section className="mt-[50px]">
       <Image
         alt="Hero img"
         width={1440}
