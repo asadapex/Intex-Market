@@ -1,0 +1,16 @@
+.test.active {
+    text-decoration: underline;
+    color: #009398;
+}
+
+.test.active:hover {
+    color: #009398;
+}
+
+.test {
+    color: inherit;
+}
+
+.test:hover {
+    color: inherit;
+}
