@@ -50,5 +50,14 @@
   "Orders": {
     "success": "Rahmat",
     "text": "Buyurtmangiz muvaffaqiyatli joylashtirildi. Tez orada siz bilan bog'lanamiz."
+  },
+  "Footer": {
+    "text1": "Bepul konsultatsiya yordami uchun",
+    "placeholder1": "Ismingiz",
+    "placeholder2": "Telefon raqamingiz",
+    "btn": "Konsultatsiya olish",
+    "worktime": "Ish vaqti",
+    "workdays": "Ish kunlari: 10:00 - 22:00 Dam olish kunlarisiz",
+    "address": "Pahlavon Mahmud ko’chasi, Yashnobod tumani, Toshkent."
   }
 }

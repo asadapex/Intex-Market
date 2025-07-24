@@ -1,6 +1,7 @@
 import { InstagramIcon, RuIcon, TelegramIcon } from "@/public/icons";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
+import LangConfig from "./LangConfig";
 
 const Header = () => {
   const t = useTranslations("HeaderItems");
@@ -27,14 +28,14 @@ const Header = () => {
 
         <div className="flex items-center gap-2">
           <a
-            href="https://t.me/example"
+            href="https://t.me/intex_market_uz"
             target="_blank"
             rel="noopener noreferrer"
           >
             <TelegramIcon />
           </a>
           <a
-            href="https://instagram.com/example"
+            href="https://www.instagram.com/intex_market.uz/"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -42,8 +43,8 @@ const Header = () => {
           </a>
         </div>
 
-        <div className="flex flex-col gap-2">
-          <RuIcon />
+        <div>
+          <LangConfig />
         </div>
       </div>
     </header>
