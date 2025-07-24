@@ -1,20 +1,22 @@
 import React, { useState } from 'react';
 import { Input, Button } from 'antd';
 import { SearchOutlined, PlusOutlined } from '@ant-design/icons';
-import ProductCard from '../../components/card/ProductCard';
 import CardHeader from '../../components/card/CardHeader';
 import AddProduct from '../../components/popup/AddProduct';
-const Framed = () => {
+import { NavLink, Outlet, useLocation } from 'react-router-dom';
+import "./style.css"
+const Products = () => {
 
-  const [isOpen, setIsOpen] = useState(false);
+    const [isOpen, setIsOpen] = useState(false);
+    const location = useLocation();
 
-  const openPopup = () => {
-    setIsOpen(true);
-  };
+    const openPopup = () => {
+        setIsOpen(true);
+    };
 
-  const closePopup = () => {
-    setIsOpen(false);
-  };
+    const closePopup = () => {
+        setIsOpen(false);
+    };
 
     return (
         <>
@@ -22,7 +24,7 @@ const Framed = () => {
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                     <Input
                         placeholder="Search"
-                        bordered={false}
+                        variant="borderless"
                         style={{
                             width: 300,
                             height: 48,
@@ -61,36 +63,15 @@ const Framed = () => {
                     <AddProduct isOpen={isOpen} onClose={closePopup} children={undefined}></AddProduct>
                 </div>
                 <div className='flex justify-center text-[35px] gap-12 text-[#A6A6A6] mt-10 mb-10'>
-                    <button >Framed</button>
-                    <button>Inflatable</button>
+                    <NavLink className={({ isActive }) =>isActive || location.pathname === "/products" ? "test active" : "test"} to="/products/framed"end>Framed</NavLink>
+                    {/* <NavLink className="test" to="/products/framed" end>Framed</NavLink> */}
+                    <NavLink className="test" to="/products/inflatable">Inflatable</NavLink>
                 </div>
-                <CardHeader/>
-                <ProductCard
-                    image="https://static.intex-market.uz/pool.png"
-                    oldPrice="1.800.000 сум"
-                    newPrice="1.520.000 сум"
-                    quantity={10}
-                    frame="Металлический"
-                    size="2,7"
-                    depth={60}
-                    onEdit={() => console.log('Edit clicked')}
-                    onDelete={() => console.log('Delete clicked')}
-                />
-                <ProductCard
-                    image="https://static.intex-market.uz/pool.png"
-                    oldPrice="1.800.000 сум"
-                    newPrice="1.520.000 сум"
-                    quantity={10}
-                    frame="Металлический"
-                    size="2,7"
-                    depth={60}
-                    onEdit={() => console.log('Edit clicked')}
-                    onDelete={() => console.log('Delete clicked')}
-                />
-
+                <CardHeader />
+                <Outlet />
             </div>
         </>
     );
 };
 
-export default React.memo(Framed);
+export default React.memo(Products);

@@ -1,44 +1,67 @@
 import React from 'react'
 import { useRoutes } from 'react-router-dom'
 import MainLayout from './layout/MainLayout'
-import Framed from './pages/products/Framed'
-
+import Products from './pages/products/Products'
+import Orders from './pages/orders/Orders'
+import ProductWrapper from './components/productWrapper/ProductWrapper'
+import OrderWrapper from './components/productWrapper/OrderWrapper'
+import ConsultWrapper from './components/productWrapper/ConsultWrapper'
+import AdminLogin from './pages/Login'
+import ProtectedRoute from './components/auth/ProtectedRoute'
+import Category from './pages/Category'
 const App = () => {
-  return useRoutes([{
+  return useRoutes([
+    {
+      path: '/login',
+      element: <AdminLogin />
+    },
+    {
     path: "/",
-    element: <MainLayout/>,
+    element: (
+        <ProtectedRoute>
+          <MainLayout />
+        </ProtectedRoute>
+      ),
     children: [
       {
         path: "products",
-        element: <Framed/>,
+        element: <Products/>,
         children: [
           {
+            element: <ProductWrapper type="framed"/>,  
+            index: true
+          },
+          {
             path: "framed",
-            element: <div>Framed</div>
+            element: <ProductWrapper type="framed"/>,
           },
           {
             path: "inflatable",
-            element: <div>Inflatable</div>
+            element: <ProductWrapper type="inflatable"/>,
           }
         ]
       },
       {
         path: "orders",
-        element: <div>Orders</div>,
+        element: <Orders/>,
         children: [
           {
-            path: "orders",
-            element: <div>Orders</div>
+            element: <OrderWrapper/>,
+            index: true
+          },
+          {
+            path: "allorders",
+            element: <OrderWrapper/>,
           },
           {
             path: "consultations",
-            element: <div>Consultations</div>
+            element: <ConsultWrapper/>,
           }
         ]
       },
       {
         path: "categories",
-        element: <div>Categories</div>
+        element: <Category/>
       },
       {
         path: "settings",

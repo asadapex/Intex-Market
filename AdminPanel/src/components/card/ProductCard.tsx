@@ -4,8 +4,8 @@ import deleteimg from "../../assets/images/delete.svg"
 
 interface ProductCardProps {
   image: string;
-  oldPrice: string;
-  newPrice: string;
+  oldPrice: number;
+  newPrice: number;
   quantity: number;
   frame: string;
   size: string;
@@ -40,11 +40,10 @@ const ProductCard: React.FC<ProductCardProps> = ({
     >
       <div style={{ width: 160}}>
         <img
-          src={image}
+          src={`http://3.87.71.145/file/${image}`}
           alt="product"
           style={{
-            width: 80,
-            height: 40,
+            height: '50px',
             objectFit: 'contain',
           }}
         />
